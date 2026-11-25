@@ -1,0 +1,9 @@
+project: savantenvs/cvxopt
+target: matrix_new
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/matrix_new/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_matrix_new
+    libfuzzer: true
+    timeout: 10

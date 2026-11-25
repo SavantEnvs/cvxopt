@@ -1,0 +1,9 @@
+project: savantenvs/cvxopt
+target: sparse_solve
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/sparse_solve/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_sparse_solve
+    libfuzzer: true
+    timeout: 10

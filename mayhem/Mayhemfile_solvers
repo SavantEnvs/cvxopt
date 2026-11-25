@@ -1,0 +1,9 @@
+project: savantenvs/cvxopt
+target: solvers
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/solvers/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_solvers
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,3 @@
+# build outputs written by mayhem/build.sh
+out/
+__pycache__/

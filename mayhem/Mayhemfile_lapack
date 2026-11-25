@@ -1,0 +1,9 @@
+project: savantenvs/cvxopt
+target: lapack
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lapack/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_lapack
+    libfuzzer: true
+    timeout: 10
